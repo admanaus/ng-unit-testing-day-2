@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 import { Observable, Subject } from 'rxjs';
 
@@ -9,6 +11,11 @@ import { HeroService } from '../hero.service';
 
 @Component({
   selector: 'app-hero-search',
+  standalone: true,
+  imports: [
+    CommonModule,
+    RouterModule
+  ],
   templateUrl: './hero-search.component.html',
   styleUrls: ['./hero-search.component.css'],
 })

@@ -2,9 +2,14 @@ import { Component, OnInit } from '@angular/core';
 
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
+import { HeroComponent } from '../hero/hero.component';
 
 @Component({
   selector: 'app-heroes',
+  standalone: true,
+  imports: [
+    HeroComponent
+  ],
   templateUrl: './heroes.component.html',
   styleUrls: ['./heroes.component.css'],
 })

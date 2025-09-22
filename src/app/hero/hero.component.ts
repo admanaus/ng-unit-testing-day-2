@@ -1,9 +1,12 @@
 // @ts-nocheck
 import { Component, Input, Output, EventEmitter } from "@angular/core";
 import { Hero } from "../hero";
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: "app-hero",
+  standalone: true,
+  imports: [RouterModule],
   templateUrl: "./hero.component.html",
   styleUrls: ["./hero.component.css"],
 })

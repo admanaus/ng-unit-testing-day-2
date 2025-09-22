@@ -1,9 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
+import { HeroSearchComponent } from '../hero-search/hero-search.component';
+import { StrengthPipe } from '../strength/strength.pipe';
 
 @Component({
   selector: 'app-dashboard',
+  standalone: true,
+  imports: [
+    RouterModule,
+    HeroSearchComponent,
+    StrengthPipe
+  ],
   templateUrl: './dashboard.component.html',
   styleUrls: [ './dashboard.component.css' ]
 })
